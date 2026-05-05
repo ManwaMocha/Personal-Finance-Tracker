@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iSpend</title>
+    <link rel="stylesheet" href="" />
   </head>
   <body>
     <header>
@@ -18,7 +19,29 @@
     </header>
     <main>
       <section class="hero">
-        <h2>Track your money. Control your spending</h2>
+        <div>
+          <h2>Track your money. Control your spending</h2>
+          <p>
+            A simple expense tracker that helps you manage income and expenses.
+          </p>
+          <a href="add.html" target="_blank">Add Transaction</a>
+        </div>
+      </section>
+
+      <section id="summary">
+        <div class="card">
+          <h3>Total Income</h3>
+          <p id="totalIncome">0</p>
+        </div>
+        <div class="card">
+          <h3>Total Expenses</h3>
+          <p id="totalExpenses">Ksh 0</p>
+        </div>
+
+        <div class="card">
+          <h3>Balance</h3>
+          <p id="balance">Ksh 0</p>
+        </div>
       </section>
     </main>
     <footer></footer>
