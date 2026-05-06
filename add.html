@@ -17,7 +17,26 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+
+    <main>
+        <section class="form-section">
+            <h2>Add Transaction</h2>
+
+            <form id="transactionForm"></form>
+            <input type="text" id="title" placeholder="Transaction title">
+            <input type="number" id="amount" placeholder="Amount">
+
+            <select id="type">
+                <option value="">Select type</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+
+                <button type="submit">Save Transaction</button>
+
+                <p id="message"></p>
+            </select>
+        </section>
+    </main>
     <footer></footer>
   </body>
 </html>
