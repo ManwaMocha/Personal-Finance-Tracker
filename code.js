@@ -1,4 +1,5 @@
 const transactionForm = document.getElementById("transactionForm");
+let transactions = [];
 
 transactionForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -29,6 +30,6 @@ transactionForm.addEventListener("submit", function (event) {
     category: category,
     date: date,
   };
-
+  transactions.push(transaction);
   console.log(transaction);
 });
