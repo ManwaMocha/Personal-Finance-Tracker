@@ -47,3 +47,25 @@ transactionForm.addEventListener("submit", function (event) {
   //alerts user
   alert("Transaction added successfully");
 });
+
+//grab table body element
+const transactionsContainer = document.getElementById("transactionsContainer");
+
+
+if (transactionsContainer) {
+  transactions.forEach(function (transaction) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+    <td>${transaction.title}</td>
+    <td>${transaction.amount}</td>
+    <td>${transaction.type}</td>
+    <td>${transaction.category}</td>
+    <td>${transaction.date}</td>
+`;
+
+transactionsContainer.appendChild(row);
+
+
+  });
+}
