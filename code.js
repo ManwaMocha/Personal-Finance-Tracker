@@ -100,3 +100,25 @@ function deleteTransaction(id) {
 
   localStorage.setItem("transactions", JSON.stringify(transactions));
 }
+
+//homepage totals
+const totalIncome = document.getElementById("totalIncome");
+const totalExpenses = document.getElementById("totalExpenses");
+const balance = document.getElementById("balance");
+
+if (totalIncome && totalExpenses && balance) {
+  let income = 0;
+  let expenses = 0;
+
+  transactions.forEach(function (transaction) {
+    if (transaction.type === "income") {
+      income += Number(transaction.amount);
+    } else if (transaction.type === "expense") {
+      expenses += Number(transaction.amount);
+    }
+  });
+
+  totalIncome.textContent = `Ksh ${income}`;
+  totalExpenses.textContent = `Ksh ${expenses}`;
+  balance.textContent = `Ksh ${income - expenses}`;
+}
