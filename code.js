@@ -31,5 +31,6 @@ transactionForm.addEventListener("submit", function (event) {
     date: date,
   };
   transactions.push(transaction);
-  console.log(transaction);
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+  
 });
