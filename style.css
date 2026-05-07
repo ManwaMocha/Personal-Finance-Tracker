@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #061e47;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px 16px 6px 8px;
+  color: rgb(224, 234, 238);
+}
+nav ul {
+  background-color: #68a4f1;
+}
+header h1 a {
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: inherit;
+}
+header h1 {
+  margin: auto;
+  margin-left: 45%;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+header ul li {
+  list-style: none;
+  padding-left: 8px;
+  font-weight: bolder;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+}
+main {
+  flex: 1;
+  max-height: 70%;
+  padding: 30px;
+}
+
+footer {
+  padding: 5px 16px 6px 8px;
+  background-color: #061e47;
+  color: wheat;
+  text-align: center;
+}
+/* FORM SECTION */
+
+.form-section {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form select {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 12px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
