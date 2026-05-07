@@ -30,7 +30,12 @@ transactionForm.addEventListener("submit", function (event) {
     category: category,
     date: date,
   };
+  //add the transaction object inside the transactions array
   transactions.push(transaction);
+  //save the array in Local storage
   localStorage.setItem("transactions", JSON.stringify(transactions));
-  
+  //resets form after saving transaction
+  transactionForm.reset();
+//alerts user
+  alert("Transaction added successfully");
 });
