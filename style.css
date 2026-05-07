@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,70 +9,133 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #f2f7ff;
+  color: #102a43;
 }
+
 header {
   background-color: #061e47;
   color: white;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 24px 16px 6px 8px;
-  color: rgb(224, 234, 238);
+  padding: 18px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-nav ul {
-  background-color: #68a4f1;
-}
-header h1 a {
-  letter-spacing: 1px;
+header a {
   text-decoration: none;
-  color: inherit;
-}
-header h1 {
-  margin: auto;
-  margin-left: 45%;
+  color: white;
 }
 
-header ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-header ul li {
-  list-style: none;
-  padding-left: 8px;
-  font-weight: bolder;
-}
-header ul {
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
+
+nav h1 {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  font-weight: bold;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #68a4f1;
+}
+
+/* MAIN */
+
 main {
   flex: 1;
-  max-height: 70%;
-  padding: 30px;
+  padding: 40px 30px;
 }
 
-footer {
-  padding: 5px 16px 6px 8px;
-  background-color: #061e47;
-  color: wheat;
+/* HOME PAGE */
+
+.hero {
   text-align: center;
+  padding: 60px 20px;
 }
-/* FORM SECTION */
+
+.hero h2 {
+  font-size: 36px;
+  color: #061e47;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #486581;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #0b5ed7;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(6, 30, 71, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: lightgray;
+  box-shadow: 0 12px 20px rgba(6, 30, 71, 0.2);
+}
+
+.card h3 {
+  color: #0b5ed7;
+}
+
+/* FORM PAGE */
 
 .form-section {
   width: 90%;
   max-width: 500px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 30px;
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(6, 30, 71, 0.12);
 }
 
 .form-section h2 {
   text-align: center;
-  margin-bottom: 20px;
+  color: #061e47;
 }
-
-/* FORM */
 
 form {
   display: flex;
@@ -79,21 +146,109 @@ form {
 form input,
 form select {
   padding: 12px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
+  border: 1px solid #b6d4fe;
+  border-radius: 6px;
   font-size: 16px;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #0b5ed7;
 }
 
 form button {
   padding: 12px;
   border: none;
-  background-color: black;
+  background-color: #0b5ed7;
   color: white;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 form button:hover {
-  opacity: 0.9;
+  background-color: #084298;
+}
+
+/* TRANSACTIONS PAGE */
+
+.transaction-section {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(6, 30, 71, 0.12);
+}
+
+.transaction-section h2 {
+  color: #061e47;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #0b5ed7;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #dbeafe;
+  text-align: center;
+}
+
+td button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td button:hover {
+  background-color: #b02a37;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 14px;
+  background-color: #061e47;
+  color: white;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 20px;
+  }
 }
