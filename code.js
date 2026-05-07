@@ -1,6 +1,14 @@
 const transactionForm = document.getElementById("transactionForm");
+//initialize transactions as an array
 let transactions = [];
 
+//checks for saved transactions and pushes them into array
+const savedTransactions = localStorage.getItem("transactions");
+
+if (savedTransactions) {
+  transactions = JSON.parse(savedTransactions);
+}
+//form handler
 transactionForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -36,6 +44,6 @@ transactionForm.addEventListener("submit", function (event) {
   localStorage.setItem("transactions", JSON.stringify(transactions));
   //resets form after saving transaction
   transactionForm.reset();
-//alerts user
+  //alerts user
   alert("Transaction added successfully");
 });
