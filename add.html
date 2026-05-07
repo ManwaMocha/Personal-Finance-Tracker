@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document | Add transaction</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -23,33 +23,34 @@
       <section class="form-section">
         <h2>Add Transaction</h2>
 
-        <form id="transactionForm"></form>
-        <input type="text" id="title" placeholder="Transaction title" />
-        <input type="number" id="amount" placeholder="Amount" />
+        <form id="transactionForm">
+          <input type="text" id="title" placeholder="Transaction title" />
+          <input type="number" id="amount" placeholder="Amount" />
 
-        <input
-          type="text"
-          id="category"
-          placeholder="Description"
-          maxlength="25"
-        />
+          <input
+            type="text"
+            id="category"
+            placeholder="Description"
+            maxlength="25"
+          />
 
-        <select id="type">
-          <option value="">Select type</option>
-          <option value="income">Income</option>
-          <option value="expense">Expense</option>
-        </select>
+          <select id="type">
+            <option value="">Select type</option>
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
 
-        <input type="date" id="date" />
+          <input type="date" id="date" />
 
-        <button type="submit">Save Transaction</button>
+          <button type="submit">Save Transaction</button>
 
-        <p id="message"></p>
+          <p id="message"></p>
+        </form>
       </section>
     </main>
     <footer>
       <p>&copy;2026 iSpend. All right reserved.</p>
     </footer>
-    <script src=""></script>
+    <script src="code.js"></script>
   </body>
 </html>
